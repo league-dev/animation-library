@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scroll Snap Slider!</title>
+	<meta name="description"
+		content="Smooth odometer counter animation with GSAP ScrollTrigger. Perfect for displaying statistics and numbers with scroll-triggered animations.">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="app.css">
+	<script>
+		function onLenisLoaded() {
+			window.lenis = new Lenis({
+				autoRaf: true,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+				anchors: {
+					offset: 100,
+				},
+			});
+		}
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="app.js"></script>
+
+</head>
+
+<body class="body ">
+	<div class="wrapper">
+		<div class="base">
+
+
+			<section class="section hero__secondary hero__secondary--image_size_mod">
+				<div class="section_in hero__secondary_in">
+					<div class="hero__secondary_breadcrumbs">
+						<nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Home</a><span
+										class="breadcrumbs__separator">/</span></li>
+								<li class="breadcrumbs__item breadcrumbs__item--current">Testimonials</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="hero__secondary_cols">
+						<div class="hero__secondary_content">
+							<h1 class="hero__secondary_content_title">Testimonials Videos</h1>
+							<div class="hero__secondary_content_description_w">
+								<div class="hero__secondary_content_description">
+									<div class="framed_text">
+										<div class="framed_text__decors">
+											<div class="framed_text__decor"></div>
+											<div class="framed_text__decor"></div>
+											<div class="framed_text__decor"></div>
+											<div class="framed_text__decor"></div>
+										</div>
+										<p>Turn authentic customer experiences into your most effective growth strategy. We produce
+											high-impact testimonial videos that build trust and drive conversions through the power of genuine
+											storytelling.</p>
+									</div>
+								</div><a class="btn_base hero__secondary_content_link" href="#">Contact Us</a>
+							</div>
+						</div>
+						<div class="hero__secondary_media_col">
+							<div class="hero__secondary_dots"><img class="hero__secondary_dots_img"
+									src="https://picsum.photos/100/100?random=0" alt=" ">
+							</div>
+							<picture class="hero__secondary_media"><img class="hero__secondary_media_img"
+									src="https://picsum.photos/800/600?random=1" alt="Content Picture" loading="lazy"></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div data-key-benefits-scroll-wrap="">
+				<section class="section key_benefits" data-key-benefits-sticky-target="">
+					<div class="section_in key_benefits__in">
+						<div class="key_benefits__heading">
+							<div class="key_benefits__label">
+								<div class="section_tag"><span>Expertise</span></div>
+							</div>
+							<h2 class="key_benefits__title">Key Benefits of Testimonial Videos</h2>
+						</div>
+						<div class="key_benefits__content">
+							<ul class="key_benefits__image_col">
+								<li class="key_benefits__image_w" data-key-benefits-image="">
+									<picture class="key_benefits__image_picture"><img class="key_benefits__image_img"
+											src="https://picsum.photos/600/400?random=2" alt="Content Picture" loading="lazy"></picture>
+								</li>
+								<li class="key_benefits__image_w" data-key-benefits-image="">
+									<picture class="key_benefits__image_picture"><img class="key_benefits__image_img"
+											src="https://picsum.photos/600/400?random=3" alt="Content Picture" loading="lazy"></picture>
+								</li>
+								<li class="key_benefits__image_w" data-key-benefits-image="">
+									<picture class="key_benefits__image_picture"><img class="key_benefits__image_img"
+											src="https://picsum.photos/600/400?random=4" alt="Content Picture" loading="lazy"></picture>
+								</li>
+								<li class="key_benefits__image_w" data-key-benefits-image="">
+									<picture class="key_benefits__image_picture"><img class="key_benefits__image_img"
+											src="https://picsum.photos/600/400?random=5" alt="Content Picture" loading="lazy"></picture>
+								</li>
+							</ul>
+							<div class="key_benefits__description_col">
+								<ul class="key_benefits__description_list">
+									<li class="key_benefits__description_item" data-key-benefits-item="">
+										<div class="key_benefits__description_item_in">
+											<div class="key_benefits__description_item_title">
+												<p><span class="key_benefits__number">01</span> Build Trust Instantly</p>
+											</div>
+											<div class="key_benefits__description_item_text">
+												<p>Testimonial videos give your audience confidence by showing real people and real outcomes.
+													They create immediate credibility in a way written quotes simply can't.</p>
+											</div>
+										</div>
+										<picture class="key_benefits__image_picture key_benefits__image_picture--mobile"><img
+												class="key_benefits__image_img" src="https://picsum.photos/600/400?random=2"
+												alt="Content Picture" loading="lazy"></picture>
+									</li>
+									<li class="key_benefits__description_item" data-key-benefits-item="">
+										<div class="key_benefits__description_item_in">
+											<div class="key_benefits__description_item_title">
+												<p><span class="key_benefits__number">02</span> Increase Conversions &amp; Confidence</p>
+											</div>
+											<div class="key_benefits__description_item_text">
+												<p>Seeing others succeed removes friction in the decision-making process. Testimonial videos
+													boost engagement, drive action, and support your sales or communication goals.</p>
+											</div>
+										</div>
+										<picture class="key_benefits__image_picture key_benefits__image_picture--mobile"><img
+												class="key_benefits__image_img" src="https://picsum.photos/600/400?random=3"
+												alt="Content Picture" loading="lazy"></picture>
+									</li>
+									<li class="key_benefits__description_item" data-key-benefits-item="">
+										<div class="key_benefits__description_item_in">
+											<div class="key_benefits__description_item_title">
+												<p><span class="key_benefits__number">03</span> Humanize Your Brand</p>
+											</div>
+											<div class="key_benefits__description_item_text">
+												<p>Hearing genuine stories from clients, partners, or employees adds warmth and authenticity —
+													helping viewers connect emotionally with your message.</p>
+											</div>
+										</div>
+										<picture class="key_benefits__image_picture key_benefits__image_picture--mobile"><img
+												class="key_benefits__image_img" src="https://picsum.photos/600/400?random=4"
+												alt="Content Picture" loading="lazy"></picture>
+									</li>
+									<li class="key_benefits__description_item" data-key-benefits-item="">
+										<div class="key_benefits__description_item_in">
+											<div class="key_benefits__description_item_title">
+												<p><span class="key_benefits__number">04</span> Enhance Brand Credibility</p>
+											</div>
+											<div class="key_benefits__description_item_text">
+												<p>High-quality video production signals professionalism and reinforces your brand's position as
+													a leader in your industry.</p>
+											</div>
+										</div>
+										<picture class="key_benefits__image_picture key_benefits__image_picture--mobile"><img
+												class="key_benefits__image_img" src="https://picsum.photos/600/400?random=5"
+												alt="Content Picture" loading="lazy"></picture>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<section class="value section" data-stagger-reveal="" data-scroll-content-up="">
+				<div class="section_in value__in">
+					<div class="value__subtitle">
+						<div class="section_tag"><span>The Value We Deliver</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="value section" data-stagger-reveal="" data-scroll-content-up="">
+				<div class="section_in value__in">
+					<div class="value__subtitle">
+						<div class="section_tag"><span>The Value We Deliver</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="value section" data-stagger-reveal="" data-scroll-content-up="">
+				<div class="section_in value__in">
+					<div class="value__subtitle">
+						<div class="section_tag"><span>The Value We Deliver</span></div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+	</div>
+	<!-- Animation Scripts -->
+
+	<script>
+
+
+		function init() {
+
+			const SELECTORS = {
+				item: '[data-key-benefits-item]',
+				image: '[data-key-benefits-image]',
+				stickyTarget: '[data-key-benefits-sticky-target]',
+				trackWrapper: '[data-key-benefits-scroll-wrap]',
+			};
+
+			const wrappers = document.querySelectorAll(SELECTORS.trackWrapper);
+
+			wrappers.forEach((scrollTrackWrapper) => {
+				const scrollStickyTarget = scrollTrackWrapper.querySelector(SELECTORS.stickyTarget);
+
+				const items = Array.from(scrollTrackWrapper.querySelectorAll(SELECTORS.item));
+				const images = Array.from(scrollTrackWrapper.querySelectorAll(SELECTORS.image));
+
+				if (!items.length || !scrollStickyTarget) {
+					console.warn('KeyBenefits: Missing required DOM elements');
+					return;
+				}
+
+				const slides = items.map((item, index) => {
+					return {
+						item,
+						image: images[index],
+					};
+				});
+
+				const handleEnterSlide = (slide, index) => {
+					slide.item.setAttribute('data-active', 'true');
+					gsap.to(slide.image, {
+						opacity: 1,
+					});
+				};
+
+				const handleLeaveSlide = (slide, index) => {
+					slide.item.setAttribute('data-active', 'false');
+					gsap.to(slide.image, {
+						opacity: 0,
+					});
+				};
+
+
+				const scrollSliderInstance = window.createScrollSlider({
+					scrollStickyTarget,
+					scrollTrackWrapper,
+					slides,
+					pinLength: (slides.length - 1) * 800,
+					swipeDelay: 600,
+					viewportTrigger: '-15%',
+					anticipatePin: 0,
+					scrub: 0,
+					mouseEventTarget: scrollTrackWrapper,
+					snapScrolling: true,
+					// onSlideChange: (index) => {},
+					onInit: () => {
+						slides.forEach(({ image, item }, index) => {
+							if (index === 0) {
+								item.setAttribute('data-active', 'true');
+								gsap.set(image, { opacity: 1 });
+							} else {
+								item.setAttribute('data-active', 'false');
+								gsap.set(image, { opacity: 0 });
+							}
+						});
+
+						window.ScrollTrigger?.refresh(); // Refresh ScrollTrigger after initialization to ensure correct measurements
+					},
+					onDestroy: () => {
+						gsap.set([...items, ...images], {
+							clearProps: 'all',
+						});
+					},
+					onSlideEnter: (slide, index) => {
+						// Move current slide from right (next) to center (current)
+						handleEnterSlide(slide, index);
+					},
+					onSlideEnterBack: (slide, index) => {
+						// Move previous slide from left (prev) to center (current)
+						handleEnterSlide(slide, index);
+					},
+					onSlideLeave: (slide, index) => {
+						// Move previous slide to left (prev)
+						handleLeaveSlide(slide, index);
+					},
+					onSlideLeaveBack: (slide, index) => {
+						// Move current slide to right (next)
+						handleLeaveSlide(slide, index, 'prev');
+					},
+				});
+			});
+		}
+
+
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				init();
+			}, 100);
+		});
+	</script>
+	<script src="lenis.js" async onload="onLenisLoaded()"></script>
+
+</body>
+
+</html>
